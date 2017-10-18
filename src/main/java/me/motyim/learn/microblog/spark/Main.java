@@ -1,5 +1,7 @@
 package me.motyim.learn.microblog.spark;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import spark.Request;
 import spark.Response;
 import spark.Route;
@@ -15,7 +17,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        
+        Logger logger = LoggerFactory.getLogger(Main.class);
+        logger.info("Project Start");
         get("/hello", (req, res) -> "Hello World..");
 
 
